@@ -30,4 +30,19 @@ these are gulp task which are copied or inspired by this wonderful tutorial <htt
 
 * TODO create list of tasks
  
+## Gitignore
+
+If don't have done it before insert gitgnores for example from [githubs gitignore](https://github.com/github/gitignore) for
+
+* node
+* bower
+* sass
+
+or do it [with oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) gitignore plugin
+
+in your basedir
+
+```bash
+gi node >> .gitignore && gi bower >> .gitignore && gi sass >> .gitignore
+```
  
