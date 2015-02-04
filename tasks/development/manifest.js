@@ -5,7 +5,11 @@ var dirs = require('../../../gulpconfig').dirs;
 
 
 gulp.task('manifest', function(){
-  gulp.src([ dirs.dest.base + '/**/*'])
-    .pipe(manifest(config.options))
-    .pipe(gulp.dest(dirs.dest.base));
+	if (config !== null) {
+		gulp.src([ dirs.dest.base + '/**/*'])
+			.pipe(manifest(config.options))
+			.pipe(gulp.dest(dirs.dest.base));
+	} else {
+		console.log('task manifest is not configured')
+	}
 });
