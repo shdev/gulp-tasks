@@ -43,7 +43,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(autoprefixer(config.autoprefixerOptions))
     .pipe(filter) // Don’t write sourcemaps of sourcemaps
-    .pipe(minifycss(config.minifyOptions))
+    // .pipe(minifycss(config.minifyOptions))
     .pipe(sourcemaps.write('.', { includeContent: false }))
     .pipe(filter.restore()) // Restore original files
     .pipe(gulp.dest(config.dest))
