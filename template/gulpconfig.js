@@ -106,7 +106,7 @@ module.exports = {
   },
   optimize : {
     html: {
-      src: dirs.dest.base + '/**/*.html',
+      src: dirs.dest.base + '/**/*.{html,htm}',
       dest: dirs.dest.base + '/',
       options: {
         collapseWhitespace: true
@@ -164,6 +164,13 @@ module.exports = {
     minifyOptions : {
       keepSpecialComments: 0
     }
+  },
+  validate: {
+    html: {
+      src: dirs.dest.base + '/**/*.{html,htm}',
+      format: 'html',
+      dest: 'validate-html.out'
+    },
   },
   watch: {
     sass: dirs.src.sass + '/**/*.{sass,scss}',

@@ -10,7 +10,7 @@ these are gulp task which are copied or inspired by this wonderful tutorial <htt
  * install the dependencies with `npm`
 
  ```bash
- npm install --save-dev bower coffee-script del gulp gulp-autoprefixer gulp-changed gulp-coffee gulp-coffeelint gulp-compass gulp-concat gulp-filter gulp-git gulp-htmlmin gulp-imagemin gulp-jshint gulp-manifest gulp-minify-css gulp-plumber gulp-rename gulp-ruby-sass gulp-sass gulp-size gulp-sourcemaps gulp-tap gulp-tar gulp-uglify gulp-util jshint-stylish preen require-dir run-sequence gulp-gzip browser-sync
+ npm install --save-dev bower coffee-script del gulp gulp-autoprefixer gulp-changed gulp-coffee gulp-coffeelint gulp-compass gulp-concat gulp-filter gulp-git gulp-htmlmin gulp-imagemin gulp-jshint gulp-manifest gulp-minify-css gulp-plumber gulp-rename gulp-ruby-sass gulp-sass gulp-size gulp-sourcemaps gulp-tap gulp-tar gulp-uglify gulp-util jshint-stylish preen require-dir run-sequence gulp-gzip browser-sync gulp-html-validator
  ```
  
  * install the dependencies from `gem` if you use [SASS](http://sass-lang.com) with [COMPASS](http://compass-style.org)
