@@ -10,7 +10,7 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(config.files, ['copy:file', 'manifest']);
 	gulp.watch(config.bower, ['copy:bower','manifest']);
 	gulp.watch(config.coffee, ['coffee', 'manifest']);
-	gulp.watch(config.html, batch({debounce: 1000}, function(events) {
+	gulp.watch(config.html.pattern, batch({config.html.debounce: 1000}, function(events) {
     	return sh_validateHtml();
 	}));
 });
