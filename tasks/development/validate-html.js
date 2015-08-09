@@ -1,22 +1,22 @@
 var gulp 		 = require('gulp')
+var gutil    = require('gulp-util');
 var htmlv    = require('gulp-html-validator');
-var plumber    = require('gulp-plumber');
 var config   = require('../../../gulpconfig').validate.html;
 
-
-
-
-
-// FIXME just a quickfix please fix me with putting this mfuntion to a separted file.
-var swallowError = function(err) {
-  gutil.log(err.toString());
-  this.emit('end');
-};
-
-gulp.task('validate:html', function() {
-  gulp.src(config.src)
-  	.pipe(plumber())
-  	.pipe(htmlv({format: config.format}))
+sh_validateHtml = function() {
+  return gulp.src(config.src)
+    .pipe(htmlv({format: config.format}))
     .pipe(gulp.dest(config.dest))
-    .on('error', swallowError)
-});
+    .pipe(gutil.buffer(function(err, files) {
+      for (var i = files.length - 1; i >= 0; i--) {
+          var s = files[i].contents.toString().trim();
+          if (s.length > 0) {
+            gutil.log(files[i].relative);
+            console.log(s);
+            console.log('');
+          }
+      };
+    }))
+  };
+
+gulp.task('validate:html', sh_validateHtml);

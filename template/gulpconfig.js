@@ -177,6 +177,7 @@ module.exports = {
     files: dirs.src.files + '/**/*',
     coffee: dirs.src.coffee + '/**/*.{coffee,litcoffee}',
     bower: dirs.src.bower_components + '/**/*.{js,css,png,gif,jpeg,jpg}',
+    html: dirs.dest.base + '/**/*.{htm,html}'
   },
 };
 
